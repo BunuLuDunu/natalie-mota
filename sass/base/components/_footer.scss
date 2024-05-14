@@ -1,0 +1,21 @@
+#menu-menu-footer {
+    display: flex;
+    gap: 5.375rem;
+    margin: auto;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-block: 0.5rem;
+
+    a {
+        &:hover {
+            font-weight: 700;
+        }
+    }
+
+    @media all and (max-width: #{$breakpoint__large_phone}) {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        padding-block: 2.75rem;
+    }
+}
