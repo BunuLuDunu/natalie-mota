@@ -25,6 +25,12 @@ Tags: photographie, photographe, événementiel, événement, profesionnel
 }
 
 @font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    src: url('./assets/fonts/poppins-medium.woff2') format(woff2);
+}
+
+@font-face {
     font-family: "Space Mono";
     font-weight: 400;
     src: url('./assets/fonts/spacemono-regular.woff2') format(woff2);

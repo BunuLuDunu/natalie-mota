@@ -12,6 +12,13 @@
         'theme_location' => 'footer_menu'
     ]);
     ?>
+
+    <!-- Appel de la modale de contact -->
+    <?php
+
+    get_template_part("template-parts/contact");
+
+    ?>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

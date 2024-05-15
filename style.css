@@ -18,6 +18,11 @@ Tags: photographie, photographe, événementiel, événement, profesionnel
   src: url("./assets/fonts/poppins-light.woff2") format(woff2);
 }
 @font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("./assets/fonts/poppins-medium.woff2") format(woff2);
+}
+@font-face {
   font-family: "Space Mono";
   font-weight: 400;
   src: url("./assets/fonts/spacemono-regular.woff2") format(woff2);
@@ -59,6 +64,11 @@ a {
 }
 a:visited {
   color: inherit;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 button {
@@ -230,6 +240,60 @@ h3 {
     align-items: center;
     padding-block: 2.75rem;
   }
+}
+
+.contact-modale {
+  width: 100%;
+  max-width: 37.5rem;
+  border: solid #000000 5px;
+  padding: 0;
+}
+.contact-modale::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.contact-modale-header {
+  background-image: url("assets/images/contact.png");
+  background-repeat: repeat;
+  height: 6.1rem;
+  margin-bottom: 2.872rem;
+}
+.contact-modale-content {
+  width: 100%;
+  max-width: 16.5rem;
+  margin-inline: auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.contact-modale-content input[type=text], .contact-modale-content input[type=email] {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.contact-modale-content textarea {
+  width: 100%;
+  height: 13.125rem;
+  margin-bottom: 1.188rem;
+}
+.contact-modale-content textarea, .contact-modale-content input[type=text], .contact-modale-content input[type=email] {
+  border: solid 1px #B8BBC2;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+}
+.contact-modale-content input[type=submit] {
+  width: 100%;
+  background-color: #D8D8D8;
+  border: none;
+  border-radius: 0.125rem;
+  font-family: "Space Mono", monospace;
+  padding-block: 1rem;
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
+}
+.contact-modale-content input[type=submit]:hover {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 body {
