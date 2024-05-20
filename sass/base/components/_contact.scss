@@ -1,4 +1,4 @@
-.contact-modale {
+.contact-modal {
     width: 100%;
     max-width: 37.5rem;
     border: solid $color__black 5px;
@@ -9,10 +9,10 @@
     }
 
     &-header {
-        background-image: url('assets/images/contact.png');
-        background-repeat: repeat;
-        height: 6.1rem;
-        margin-bottom: 2.872rem;
+        background-image: url('assets/images/contact.svg');
+        background-repeat: repeat-x;
+        height: 6.625rem;
+        margin-block: 1.125rem 2.872rem;
     }
 
     &-content {

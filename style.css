@@ -136,6 +136,7 @@ h3 {
 }
 .main-navigation #menu-menu-principal a:hover {
   font-weight: 700;
+  cursor: pointer;
 }
 @media all and (max-width: 700px) {
   .main-navigation #menu-menu-principal {
@@ -242,22 +243,22 @@ h3 {
   }
 }
 
-.contact-modale {
+.contact-modal {
   width: 100%;
   max-width: 37.5rem;
   border: solid #000000 5px;
   padding: 0;
 }
-.contact-modale::backdrop {
+.contact-modal::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.contact-modale-header {
-  background-image: url("assets/images/contact.png");
-  background-repeat: repeat;
-  height: 6.1rem;
-  margin-bottom: 2.872rem;
+.contact-modal-header {
+  background-image: url("assets/images/contact.svg");
+  background-repeat: repeat-x;
+  height: 6.625rem;
+  margin-block: 1.125rem 2.872rem;
 }
-.contact-modale-content {
+.contact-modal-content {
   width: 100%;
   max-width: 16.5rem;
   margin-inline: auto;
@@ -265,22 +266,22 @@ h3 {
   font-weight: 500;
   font-size: 18px;
 }
-.contact-modale-content input[type=text], .contact-modale-content input[type=email] {
+.contact-modal-content input[type=text], .contact-modal-content input[type=email] {
   width: 100%;
   height: 2.5rem;
   margin-bottom: 1.5rem;
 }
-.contact-modale-content textarea {
+.contact-modal-content textarea {
   width: 100%;
   height: 13.125rem;
   margin-bottom: 1.188rem;
 }
-.contact-modale-content textarea, .contact-modale-content input[type=text], .contact-modale-content input[type=email] {
+.contact-modal-content textarea, .contact-modal-content input[type=text], .contact-modal-content input[type=email] {
   border: solid 1px #B8BBC2;
   border-radius: 0.5rem;
   margin-top: 0.25rem;
 }
-.contact-modale-content input[type=submit] {
+.contact-modal-content input[type=submit] {
   width: 100%;
   background-color: #D8D8D8;
   border: none;
@@ -291,7 +292,62 @@ h3 {
   transition: 1s;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
 }
-.contact-modale-content input[type=submit]:hover {
+.contact-modal-content input[type=submit]:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+main {
+  margin: 2.375rem 9.125rem 6.813rem 9.125rem;
+}
+
+.photo-info-container {
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.313rem;
+  border-bottom: solid #000000 1px;
+}
+.photo-info-container .photo-info {
+  align-self: end;
+  border-bottom: solid #000000 1px;
+  padding-bottom: 2.313rem;
+}
+.photo-info-container .photo-info h2 {
+  font-weight: 400;
+  margin: 0;
+}
+.photo-info-container .photo-info .photo-description-item {
+  padding-top: 1.25rem;
+  font-size: 0.875rem;
+}
+.photo-info-container .photo-image img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+}
+.photo-info-container .contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2.313rem 2rem;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+.photo-info-container .contact-info .contact-btn {
+  background-color: #D8D8D8;
+  border: none;
+  border-radius: 0.125rem;
+  font-family: "Space Mono", monospace;
+  padding: 1rem 6.875rem 1rem 6.875rem;
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
+}
+.photo-info-container .contact-info .contact-btn:hover {
   background-color: #000000;
   color: #FFFFFF;
 }

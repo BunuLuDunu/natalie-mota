@@ -5,6 +5,7 @@ function mota_enqueue_scripts()
 {
     wp_enqueue_style('mota-style', get_stylesheet_uri());
     wp_enqueue_script('mota-navigation', get_template_directory_uri() . './js/navigation.js', '', '', true);
+    wp_enqueue_script('mota-contact', get_template_directory_uri() . './js/contact.js', '', '', true);
 }
 
 // Menu de navigation
@@ -19,3 +20,6 @@ function add_nav_menus()
 
 // Custom Logo
 add_theme_support('custom-logo');
+
+// Images mises en avant
+add_theme_support('post-thumbnails');

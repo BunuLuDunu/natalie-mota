@@ -19,17 +19,16 @@ navLinks.forEach(link => {
 // Toggle de la modale de contact
 const contactBtn = document.getElementById('menu-item-52');
 
-const contactModale = document.querySelector('.contact-modale');
+const contactModal = document.querySelector('.contact-modal');
 
-const contactModaleWrap = document.querySelector('.contact-modale-wrapper');
+const contactModalWrap = document.querySelector('.contact-modal-wrapper');
 
 contactBtn.addEventListener('click', () => {
-    contactModale.showModal()
+    contactModal.showModal()
 })
 
 document.addEventListener('click', (event) => {
-    console.log(event.target)
-    if(!contactModaleWrap.contains(event.target) && !contactBtn.contains(event.target)) {
-        contactModale.close();
+    if(contactModal.contains(event.target) && !contactModalWrap.contains(event.target)) {
+        contactModal.close();
     };
 })

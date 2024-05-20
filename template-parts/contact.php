@@ -1,8 +1,8 @@
-<dialog id="contact-modale" class="contact-modale">
-    <div class="contact-modale-wrapper">
-        <div class="contact-modale-header">
+<dialog id="contact-modal" class="contact-modal">
+    <div class="contact-modal-wrapper">
+        <div class="contact-modal-header">
         </div>
-        <div class="contact-modale-content">
+        <div class="contact-modal-content">
             <!-- Ajout du formulaire de contact -->
             <?php
 
