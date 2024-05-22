@@ -351,6 +351,35 @@ main {
   background-color: #000000;
   color: #FFFFFF;
 }
+.photo-info-container .contact-nav {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+}
+.photo-info-container .contact-nav-thumbnail {
+  position: relative;
+}
+.photo-info-container .contact-nav-thumbnail img {
+  width: 81px;
+  height: 71px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.photo-info-container .contact-nav-thumbnail img:first-child:not(:only-child) {
+  position: absolute;
+}
+.photo-info-container .contact-nav-arrows {
+  display: flex;
+  gap: 1.875rem;
+}
+.photo-info-container .contact-nav:has(a:first-child:hover) img:first-child {
+  opacity: 1;
+}
+.photo-info-container .contact-nav:has(a:last-child:hover) img:last-child {
+  opacity: 1;
+}
 
 body {
   font-family: "Space Mono", monospace;
