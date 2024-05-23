@@ -136,7 +136,7 @@ while (have_posts()) :
 						<?php
 						while ($query->have_posts()) :
 							$query->the_post();
-							get_template_part('template-parts/photo-cardo');
+							get_template_part('template-parts/photo-card');
 						endwhile;
 						?>
 					</div>
