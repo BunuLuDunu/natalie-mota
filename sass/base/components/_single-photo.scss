@@ -1,9 +1,9 @@
 main {
     margin: 2.375rem 9.125rem 6.813rem 9.125rem;
+    text-transform: uppercase;
 }
 
 .photo-info-container {
-    text-transform: uppercase;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1.313rem;
@@ -94,5 +94,24 @@ main {
         &:has(a:last-child:hover) img:last-child {
             opacity: 1;
         }
+    }
+}
+
+.suggestions {
+
+    &-container {
+        margin-top: 4.813rem;
+    }
+
+    &-title {
+        font-weight: 400;
+        margin-bottom: 3.25rem;
+    }
+
+    &-photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+        justify-items: center;
     }
 }

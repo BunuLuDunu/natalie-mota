@@ -22,7 +22,7 @@ a {
     }
 }
 
-p {
+p, h1, h2, h3 {
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -34,6 +34,12 @@ button {
     padding-inline: 0;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 // Typographies
 @import "./typography/headings";
 
@@ -42,3 +48,4 @@ button {
 @import "./components/footer";
 @import "./components/contact";
 @import "./components/single-photo";
+@import "./components/photo-card";
