@@ -6,6 +6,7 @@
     padding-inline: 9.125rem;
     padding-block: 1.75rem;
     position: relative;
+    box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
 
     .custom-logo-link {
         display: block;
@@ -120,6 +121,7 @@
 
     @media all and (max-width: #{$breakpoint__large_phone}) {
         padding-inline: 1.625rem;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.09);
     }
 }
 

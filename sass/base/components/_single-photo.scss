@@ -1,6 +1,14 @@
 main {
     margin: 2.375rem 9.125rem 6.813rem 9.125rem;
     text-transform: uppercase;
+
+    @media all and (max-width: #{$breakpoint__tablet}) {
+        margin-inline: 5.5rem;   
+    }
+
+    @media all and (max-width: #{$breakpoint__large_phone}) {
+        margin: 1.25rem 3.5rem 1.588rem 3.5rem;
+    }
 }
 
 .photo-info-container {
@@ -17,19 +25,36 @@ main {
         h2 {
             font-weight: 400;
             margin: 0;
+
+            @media all and (max-width: #{$breakpoint__tablet}) {
+                font-size: 2.875rem;
+                line-height: 2.875rem;
+            }
         }
 
         .photo-description-item {
             padding-top: 1.25rem;
             font-size: 0.875rem;
+
+            @media all and (max-width: #{$breakpoint__tablet}) {
+                padding-top: 0.938rem;
+            }
         }
     }
 
-    .photo-image img {
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-        max-height: 100vh;
+    .photo-image {
+        align-self: end;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            max-height: 100vh;
+        }
+
+        @media all and (max-width: #{$breakpoint__tablet}) {
+            order: -1;
+        }
     }
 
     .contact-info {
@@ -47,7 +72,8 @@ main {
         border: none;
         border-radius: 0.125rem;
         font-family: $font__main;
-        padding: 1rem 6.875rem 1rem 6.875rem;
+        padding-block: 1rem;
+        min-width: 17rem;
         cursor: pointer;
         transition: 1s;
         box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
@@ -56,6 +82,15 @@ main {
             background-color: $color__black;
             color: $color__white;
             }
+
+            @media all and (max-width: #{$breakpoint__tablet}) {
+                margin-top: 0.938rem;
+            }
+        }
+
+        @media all and (max-width: #{$breakpoint__tablet}) {
+            flex-direction: column;
+            padding-block: 0 1.438rem;
         }
     }
 
@@ -94,7 +129,17 @@ main {
         &:has(a:last-child:hover) img:last-child {
             opacity: 1;
         }
+
+        @media all and (max-width: #{$breakpoint__tablet}) {
+            display: none;
+        }
     }
+
+    @media all and (max-width: #{$breakpoint__tablet}) {
+        grid-template-columns: 1fr;
+        row-gap: 1.313rem;
+    }
+
 }
 
 .suggestions {
@@ -113,5 +158,21 @@ main {
         grid-template-columns: 1fr 1fr;
         gap: 1.25rem;
         justify-items: center;
+    }
+
+    @media all and (max-width: #{$breakpoint__large_phone}) {
+        &-container {
+            margin-top: 1.5rem;
+        }
+
+        &-title {
+            text-align: center;
+            margin-bottom: 1.25rem;
+        }
+
+        &-photos {
+            grid-template-columns: 1fr;
+            gap: 1.313rem;
+        }
     }
 }
