@@ -6,8 +6,10 @@ function mota_enqueue_scripts()
     wp_enqueue_style('mota-style', get_stylesheet_uri());
     // Script menu de navigation
     wp_enqueue_script('mota-navigation', get_template_directory_uri() . './js/navigation.js', '', '', true);
-    // Script modale de contact
-    wp_enqueue_script('mota-contact', get_template_directory_uri() . './js/contact.js', '', '', true);
+    // Script modale de contact seulement sur la page single-photo
+    if (is_singular('photo')) {
+        wp_enqueue_script('mota-contact', get_template_directory_uri() . './js/contact.js', '', '', true);
+    }
     // Script lightbox photo
     wp_enqueue_script('mota-lightbox', get_template_directory_uri() . './js/lightbox.js', '', '', true);
 }

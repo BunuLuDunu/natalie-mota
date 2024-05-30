@@ -538,6 +538,47 @@ main {
   opacity: 1;
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  aspect-ratio: 1140/962;
+  position: relative;
+  margin: -2.375rem -9.125rem -6.813rem -9.125rem;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero h1 {
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 3px #FFFFFF;
+}
+@media all and (max-width: 1040px) {
+  .hero h1 {
+    font-size: 3.5rem;
+    -webkit-text-stroke: 1.5px #FFFFFF;
+  }
+}
+@media all and (max-width: 700px) {
+  .hero h1 {
+    font-size: 1.724rem;
+    -webkit-text-stroke: 0.86px #FFFFFF;
+  }
+}
+@media all and (max-width: 700px) {
+  .hero {
+    margin: -1.25rem -3.5rem -1.588rem -3.5rem;
+    aspect-ratio: 379/253;
+  }
+}
+
 body {
   font-family: "Space Mono", monospace;
 }
