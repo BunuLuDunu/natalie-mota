@@ -80,7 +80,7 @@ while (have_posts()) :
 				<!-- Bouton de contact -->
 				<div class="contact-info">
 					<p>Cette photo vous intéresse ?</p>
-					<button class="contact-btn" data-reference="<?php echo $reference_photo; ?>">Contact</button>
+					<button class="contact-btn button" data-reference="<?php echo $reference_photo; ?>">Contact</button>
 				</div>
 				<!-- Navigation photo précédente/suivante -->
 				<div class="contact-nav">

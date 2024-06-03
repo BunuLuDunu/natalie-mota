@@ -1,0 +1,23 @@
+.photo-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+        margin-block: 2.5rem;
+
+        @media all and (max-width: #{$breakpoint__tablet}) {
+          grid-template-columns: 1fr;
+          margin-block: 1.813rem;
+        }
+    }
+
+    .load-more-btn {
+        min-width: 17rem;
+    }
+
+}

@@ -44,9 +44,11 @@ button {
 @import "./typography/headings";
 
 // Composants 
+@import "./components/front-page";
 @import "./components/header";
 @import "./components/footer";
 @import "./components/contact";
 @import "./components/single-photo";
 @import "./components/photo-card";
 @import "./components/hero";
+@import "./components/button";
