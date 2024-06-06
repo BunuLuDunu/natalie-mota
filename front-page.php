@@ -4,6 +4,11 @@
  * The front-page template file
  */
 
+// Récupérer les categories
+$categories = get_terms('categorie');
+// Récupérer les formats
+$formats = get_terms('format');
+
 get_header();
 
 while (have_posts()) :
@@ -16,9 +21,40 @@ while (have_posts()) :
 
         <!-- Catalogue photo -->
         <section class="photo-list">
-            <form action="<?php echo admin_url('admin-ajax.php'); ?>" class="photo-list-filters">
-                <input type="hidden" name="action" value="load_more_photos">
-                <input type="hidden" name="page" value="2">
+            <form id="filters" data-page="2" action="<?php echo admin_url('admin-ajax.php'); ?>" class="photo-list-filters">
+                <!-- Inputs pour le bouton charger plus -->
+                <input type="hidden" name="nonce" value="<?php echo wp_create_nonce('filter_photos'); ?>">
+                <input type="hidden" name="action" value="filter_photos">
+
+                <!-- Filtres et tri -->
+                <!-- Filtre par catégorie -->
+                <select name="categorie" id="categories">
+                    <option value="">Catégories</option>
+                    <?php
+                    if ($categories) {
+                        foreach ($categories as $category) {
+                            echo '<option value="' . $category->slug . '">' . $category->name . '</option>';
+                        }
+                    }
+                    ?>
+                </select>
+                <!-- Filtre par format -->
+                <select name="format" id="formats">
+                    <option value="">Formats</option>
+                    <?php
+                    if ($formats) {
+                        foreach ($formats as $format) {
+                            echo '<option value="' . $format->slug . '">' . $format->name . '</option>';
+                        }
+                    }
+                    ?>
+                </select>
+                <!-- Filtre par date -->
+                <select name="tri" id="dates">
+                    <option value="">Trier par</option>
+                    <option value="desc">A partir des plus récentes</option>
+                    <option value="asc">A partir des plus anciennes</option>
+                </select>
             </form>
             <div class="photo-list-container">
                 <?php
@@ -35,7 +71,7 @@ while (have_posts()) :
                 endif;
                 ?>
             </div>
-            <button class="load-more-btn button">Charger plus</button>
+            <button type="submit" form="filters" class="load-more-btn button">Charger plus</button>
         </section>
     </main>
 
