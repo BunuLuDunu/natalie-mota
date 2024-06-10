@@ -34,8 +34,11 @@ $categories = get_the_terms(get_the_ID(), 'categorie');
                 </svg>
             </a>
             <div class="card-info">
-                <p><?php echo $reference_photo ?? 'Inconnue' ?></p>
-                <p><?php
+                <p class="reference-photo">
+                    <?php echo $reference_photo ?? 'Inconnue' ?>
+                </p>
+                <p class="categorie-photo">
+                    <?php
                     if ($categories) {
                         foreach ($categories as $category) {
                             $categorie_name = $category->name;
@@ -44,7 +47,7 @@ $categories = get_the_terms(get_the_ID(), 'categorie');
                     } else {
                         echo ('Inconnue');
                     } ?>
-                </P>
+                </p>
             </div>
         </div>
     </article>

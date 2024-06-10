@@ -168,9 +168,7 @@ h3 {
 }
 .photo-list #filters option {
   text-transform: capitalize;
-}
-.photo-list #filters option:first-child {
-  visibility: hidden;
+  font-family: "Poppins", sans-serif;
 }
 @media all and (max-width: 1192px) {
   .photo-list #filters {
@@ -195,11 +193,15 @@ h3 {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
   background-color: white;
   box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
+}
+@media all and (max-width: 700px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
 }
 
 .main-navigation {
@@ -656,7 +658,89 @@ main {
   color: #FFFFFF;
 }
 
-body {
+.lightbox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  border: none;
+  padding: 3.5rem;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  pointer-events: none;
+}
+.lightbox-nav {
+  color: #FFFFFF;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.lightbox-nav:hover {
+  font-weight: 700;
+}
+.lightbox-nav:hover .small {
+  display: none;
+}
+.lightbox-nav:hover .large {
+  display: block;
+}
+.lightbox-nav .large {
+  display: none;
+}
+.lightbox-nav.prev .small {
+  margin-left: 9px;
+}
+.lightbox-nav.next .small {
+  margin-right: 9px;
+}
+@media all and (max-width: 920px) {
+  .lightbox-nav.prev span, .lightbox-nav.next span {
+    display: none;
+  }
+}
+.lightbox-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  gap: 1.188rem;
+  margin-inline: 3.75rem;
+}
+.lightbox-card img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 7rem - 2rem - 1rem);
+  place-self: center;
+  object-fit: contain;
+}
+.lightbox-card-info {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+@media all and (max-width: 920px) {
+  .lightbox-card {
+    margin-inline: 1.5rem;
+  }
+}
+@media all and (max-width: 920px) {
+  .lightbox {
+    padding: 1.725rem;
+  }
+}
+
+* {
   font-family: "Space Mono", monospace;
 }
 

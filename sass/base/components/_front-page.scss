@@ -52,10 +52,7 @@
 
         option {
             text-transform: capitalize;
-            
-            &:first-child {
-                visibility: hidden;
-            }
+            font-family: $font__secondary;
         }
 
         @media all and (max-width: #{$breakpoint__laptop}) {
