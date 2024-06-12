@@ -11,6 +11,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nathalie Mota</title>
 
     <?php wp_head(); ?>
 </head>
@@ -18,7 +19,6 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
-        <a class="skip-link screen-reader-text" href="#content"></a>
 
         <header id="masthead" class="site-header">
             <nav id="site-navigation" class="main-navigation">
@@ -29,7 +29,7 @@
                 ]);
                 ?>
 
-                <button class="nav-toggle">
+                <button class="nav-toggle" type="button" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>

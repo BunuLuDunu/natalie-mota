@@ -28,7 +28,7 @@ while (have_posts()) :
 
                 <!-- Filtres et tri -->
                 <!-- Filtre par catégorie -->
-                <select name="categorie" id="categories">
+                <select name="categorie" id="categories" aria-label="Catégories">
                     <option value="">Catégories</option>
                     <?php
                     if ($categories) {
@@ -39,7 +39,7 @@ while (have_posts()) :
                     ?>
                 </select>
                 <!-- Filtre par format -->
-                <select name="format" id="formats">
+                <select name="format" id="formats" aria-label="Formats">
                     <option value="">Formats</option>
                     <?php
                     if ($formats) {
@@ -50,7 +50,7 @@ while (have_posts()) :
                     ?>
                 </select>
                 <!-- Filtre par date -->
-                <select name="tri" id="dates">
+                <select name="tri" id="dates" aria-label="Trier par">
                     <option value="">Trier par</option>
                     <option value="desc">A partir des plus récentes</option>
                     <option value="asc">A partir des plus anciennes</option>

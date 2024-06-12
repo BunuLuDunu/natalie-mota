@@ -3,6 +3,7 @@
 /**
  * The template for the hero header
  */
+
 ?>
 
 <section class="hero">
@@ -18,8 +19,11 @@
             $query->the_post();
 
             $image = get_the_post_thumbnail_url();
+            // Récupérer l'attribut alt de la photo
+            $photo_id = get_post_thumbnail_id();
+            $photo_alt = get_post_meta($photo_id, '_wp_attachment_image_alt', true);
     ?>
-            <img src="<?php echo $image; ?>">
+            <img src="<?php echo $image; ?>" alt="<?php echo $photo_alt; ?>">
     <?php
         endwhile;
     endif;
