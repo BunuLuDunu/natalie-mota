@@ -682,7 +682,7 @@ main {
   color: #FFFFFF;
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  align-self: center;
 }
 .lightbox-nav:hover {
   font-weight: 700;
