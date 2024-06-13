@@ -60,7 +60,7 @@ while (have_posts()) :
                 <?php
                 $query = new WP_Query([
                     'post_type' => 'photo',
-                    'post_per_page' => 8,
+                    'posts_per_page' => 8,
                 ]);
 
                 if ($query->have_posts()) :

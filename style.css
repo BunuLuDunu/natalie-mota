@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Nathalie Mota
+Theme Name: Natalie Mota
 Author: Laurine Sassano
 Description: Thème du site de la photographe professionnelle dans l'événementiel Natalie Mota
 Requires at least: 6.4
@@ -581,7 +581,7 @@ main {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-in-out;
 }
 .photo-card-overlay .expand-btn {
   align-self: start;
